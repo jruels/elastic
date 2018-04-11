@@ -11,33 +11,33 @@ Installing VirtualBox on Windows is straight forward and only takes a few steps 
 
 Run the executable by double clicking on it, and you’ll see a window like below: 
 
-![](Lab01/84F73F72-C3AD-4AA1-AA74-16C961AC10D4.png)
+![](index/84F73F72-C3AD-4AA1-AA74-16C961AC10D4.png)
 
 Click “Next” to begin the installation.  During the installation you’ll receive a network warning like below.  This just means you will be disconnected from the network for a second. 
 
 
-![](Lab01/DA61E1DF-2025-4E9D-8D24-D96EFB32AE4F.png)
+![](index/DA61E1DF-2025-4E9D-8D24-D96EFB32AE4F.png)
 Go ahead and click “Yes” to continue the installation 
 
-![](Lab01/CE562B58-AC9E-4847-B284-EAB2F8DE6DCD.png)
+![](index/CE562B58-AC9E-4847-B284-EAB2F8DE6DCD.png)
 Click Install and you’ll see a screen confirming you trust Oracle, and want to install Universal Serial Bus device.  Click “Install” to continue the installation. 
 
-![](Lab01/8E290751-A047-4764-9ABC-56CC12F42A42.png)
+![](index/8E290751-A047-4764-9ABC-56CC12F42A42.png)
 
 
 Now continue the wizard until installation is complete. 
 
 ### Mac 
 To install VirtualBox on MacOS double-click the DMG file downloaded in the previous step to open it and you’ll see the following: 
-![](Lab01/2F555227-E253-4CD2-A594-57BBA217FE71.png)
+![](index/2F555227-E253-4CD2-A594-57BBA217FE71.png)
 
 Follow the instructions and double-click the `Virtualbox.pkg` file to start the installation wizard. 
 
 Click “Continue” in the pop-up window and then again to start the installation.  At this point you may seen an error saying it couldn’t install VirtualBox and to open Security preferences on your Mac.  Click this button, click the lock in the bottom left corner, type in password, and then click “Allow”.  
-![](Lab01/32259CA9-445F-45D3-A30F-A2BEF8BF92CD.png)
+![](index/32259CA9-445F-45D3-A30F-A2BEF8BF92CD.png)
 
 Rerun the installation and it should succeed. 
-![](Lab01/CFDA30BF-C1A0-4F62-B812-7E890AC42763.png)
+![](index/CFDA30BF-C1A0-4F62-B812-7E890AC42763.png)
   
 
 ## Install Ubuntu 
@@ -46,43 +46,43 @@ Download Ubuntu server 16.04 from https://www.ubuntu.com/download/server
 
 In VirtualBox click “New” and in the pop-up give your VM a name, for Type choose Linux, and for Version select Ubuntu (64-bit)
 
-![](Lab01/48144BBE-9F31-4239-88E0-EAC5D641424F.png)
+![](index/48144BBE-9F31-4239-88E0-EAC5D641424F.png)
 
 Click “Continue” and on the next screen give your VM as much memory as you can spare. The minimum is 2GB, and recommended is 4GB. 
 
-![](Lab01/0B5EA1B4-AB4E-40AC-8556-2F4DF42A0B95.png)
+![](index/0B5EA1B4-AB4E-40AC-8556-2F4DF42A0B95.png)
 
 Click “Continue” , and then “Create” to create a virtual hard disk (VDI)  and then Continue to create a Dynamically allocated disk.  Set the size of disk to 20GB or more.
 
 At this point you are dropped back to the main VirtualBox window, click the “Start” button and you will be prompted for an ISO image, click the little folder icon to browse to the Ubuntu ISO downloaded earlier. 
 
 
-![](Lab01/BAB0E74E-D1A8-45EE-AB06-05EDC9E90381.png)
+![](index/BAB0E74E-D1A8-45EE-AB06-05EDC9E90381.png)
 
 Now you’ll go through the Ubuntu installation process.  Select language (Default is English), then “Install Ubuntu Server” , after this select the defaults until it begins the installation.  
 
 Fill in a hostname
 
-![](Lab01/6FCC338D-D142-4D0D-8CA8-37AA306FE643.png)
+![](index/6FCC338D-D142-4D0D-8CA8-37AA306FE643.png)
 
 Provide full name, username and password then hit Enter.  Now continue the installation by choosing defaults. 
 After choosing LVM for filesystem select “Yes” to write changes by hitting the TAB key and then Enter. 
-![](Lab01/7C784B77-8DAF-4CDF-9839-4E446746550D.png)
+![](index/7C784B77-8DAF-4CDF-9839-4E446746550D.png)
 
 Confirm size of disk and hit Enter.  Now click TAB again and then Enter to confirm partition is written.  Select defaults until it asks what software to install, scroll to the bottom and hit spacebar to select SSH server, then hit Enter to install Ubuntu. 
 
 When installation is complete hit Enter on this screen to reboot.
-![](Lab01/6C9AB605-FA42-4C1E-A7A8-24575DCB5C9E.png)
+![](index/6C9AB605-FA42-4C1E-A7A8-24575DCB5C9E.png)
 
 
 Now we just need to configure some port forwarding to make it easy to access Elasticsearch from our local machine. 
 
 In VirtualBox click Settings —> Network —> Advanced —> Port Forwarding. 
-![](Lab01/7925BD74-5659-474E-AEE9-4CBEA151C2DD.png)
+![](index/7925BD74-5659-474E-AEE9-4CBEA151C2DD.png)
 
 In the Port Forwarding screen click the little green icon with a plus sign in the top right and add the following rules. 
 
-![](Lab01/1A0EF3EA-7B6F-40A0-B258-4093356FF363.png)
+![](index/1A0EF3EA-7B6F-40A0-B258-4093356FF363.png)
 
 Now SSH to your VM either using terminal or Putty, with the following information. 
 
@@ -106,10 +106,10 @@ ssh ubuntu@127.0.0.1 -p2222
 ### Windows 
 Open Putty and configure a new session. 
 **CHANGE PORT to 2222**
-![](Lab01/C4EC1E64-175D-4C84-8C49-D938337FA35A.png)
+![](index/C4EC1E64-175D-4C84-8C49-D938337FA35A.png)
 
  Now save your session 
-![](Lab01/FD3BA694-FD69-4C86-8EAF-4D5FC813EABA.png)
+![](index/FD3BA694-FD69-4C86-8EAF-4D5FC813EABA.png)
 
 
 Elasticsearch is based on Java, so we need to install a Java environment.
@@ -179,7 +179,7 @@ $ curl 127.0.0.1:9200
 ```
 
 You can also test it by loading http://127.0.0.1:9200 in a browser, and if you see something like the following it’s working correctly. 
-![](Lab01/05CDF398-09D6-4AE2-BA56-7A5BAA985A2D.png)
+![](index/05CDF398-09D6-4AE2-BA56-7A5BAA985A2D.png)
 
 ## Loading data into Elasticsearch 
 Now that we have Elasticsearch installed it needs some data to aggregate and index.  Let’s go ahead and load in the complete works of William Shakespeare 
