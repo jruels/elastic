@@ -106,10 +106,12 @@ ssh ubuntu@127.0.0.1 -p2222
 ### Windows 
 Open Putty and configure a new session.   
 **CHANGE PORT to 2222**
+
 ![](index/C4EC1E64-175D-4C84-8C49-D938337FA35A.png)
 
 
  Now save your session 
+
 ![](index/FD3BA694-FD69-4C86-8EAF-4D5FC813EABA.png)
 
 
