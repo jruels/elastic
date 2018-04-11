@@ -216,7 +216,7 @@ curl -H 'Content-Type: application/json' -XGET '127.0.0.1:9200/shakespeare/_sear
 '
 ```
 
-We are searching all of the data we inserted for “to be or not to be” and our result is…   Wow, pulled it out very quickly and we now known that it came from Hamlet.
+We are searching all of the data we inserted for “to be or not to be” and our result is…   Wow, pulled it out very quickly and we now know that it came from Hamlet.
 ```
 {
   "took" : 153,
