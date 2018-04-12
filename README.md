@@ -7,3 +7,7 @@ Lab 2: [Download dataset](labs/02-movielens/)
 Lab 3: [Create MovieLens mapping](labs/03-movielens-mapping)
 
 Lab 4: [Import MovieLens documents](labs/04-movielens-data)
+
+Lab 5: [Update document](labs/05-update-document)
+
+Lab 6: [Version Conflict](labs/06-versions)
