@@ -9,7 +9,7 @@ https://grouplens.org/datasets/movielens/
 
 Now we are going to download the smaller dataset under “recommended for education and development”. We do not have the computing power with one VM to crunch through the larger datasets. 
 
-Click “ms-latest-small.zip” to download it to your local machine and then double click to unzip.  Now we can see there are quite a few files inside of the zip folder. 
+Click “ml-latest-small.zip” to download it to your local machine and then double click to unzip.  Now we can see there are quite a few files inside of the zip folder. 
 
 
 ![](index/C1AA5537-4DF2-48BE-931D-28B4E16DE279.png)
