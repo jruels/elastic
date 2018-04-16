@@ -1,5 +1,13 @@
 # Elasticsearch Course Site 
 
+This site contains the content and labs for the Elasticsearch course. 
+
+## Day 1 
+
+### [Course Content](http://bit.ly/es6-slides)
+
+### Labs
+
 Lab 1: [Installation](labs/01-install/)   
 
 Lab 2: [Download dataset](labs/02-movielens/) 
@@ -18,4 +26,6 @@ Lab 8: [Joins](labs/08-join)
 
 Lab 9: [Query tips](labs/09-search)
 
-Lab 10: [More Query tips](labs/09-more-search
+Lab 10: [More Query tips](labs/10-more-search
+
+
