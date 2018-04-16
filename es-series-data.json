@@ -1,0 +1,16 @@
+{ "create" : { "_index" : "series", "_type" : "movie", "_id" : "1", "routing" : 1} }
+{ "id": "1", "film_to_franchise": {"name": "franchise"}, "title" : "Star Wars" }
+{ "create" : { "_index" : "series", "_type" : "movie", "_id" : "260", "routing" : 1} }
+{ "id": "260", "film_to_franchise": {"name": "film", "parent": "1"}, "title" : "Star Wars: Episode IV - A New Hope", "year":"1977" , "genre":["Action", "Adventure", "Sci-Fi"] }
+{ "create" : { "_index" : "series", "_type" : "movie", "_id" : "1196", "routing" : 1} }
+{ "id": "1196", "film_to_franchise": {"name": "film", "parent": "1"}, "title" : "Star Wars: Episode V - The Empire Strikes Back", "year":"1980" , "genre":["Action", "Adventure", "Sci-Fi"] }
+{ "create" : { "_index" : "series", "_type" : "movie", "_id" : "1210", "routing" : 1} }
+{ "id": "1210", "film_to_franchise": {"name": "film", "parent": "1"}, "title" : "Star Wars: Episode VI - Return of the Jedi", "year":"1983" , "genre":["Action", "Adventure", "Sci-Fi"] }
+{ "create" : { "_index" : "series", "_type" : "movie", "_id" : "2628", "routing" : 1} }
+{ "id": "2628", "film_to_franchise": {"name": "film", "parent": "1"}, "title" : "Star Wars: Episode I - The Phantom Menace", "year":"1999" , "genre":["Action", "Adventure", "Sci-Fi"] }
+{ "create" : { "_index" : "series", "_type" : "movie", "_id" : "5378", "routing" : 1} }
+{ "id": "5378", "film_to_franchise": {"name": "film", "parent": "1"}, "title" : "Star Wars: Episode II - Attack of the Clones", "year":"2002" , "genre":["Action", "Adventure", "Sci-Fi", "IMAX"] }
+{ "create" : { "_index" : "series", "_type" : "movie", "_id" : "33493", "routing" : 1} }
+{ "id": "33493", "film_to_franchise": {"name": "film", "parent": "1"}, "title" : "Star Wars: Episode III - Revenge of the Sith", "year":"2005" , "genre":["Action", "Adventure", "Sci-Fi"] }
+{ "create" : { "_index" : "series", "_type" : "movie", "_id" : "122886", "routing" : 1} }
+{ "id": "122886", "film_to_franchise": {"name": "film", "parent": "1"}, "title" : "Star Wars: Episode VII - The Force Awakens", "year":"2015" , "genre":["Action", "Adventure", "Fantasy", "Sci-Fi", "IMAX"] }
