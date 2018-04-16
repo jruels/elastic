@@ -26,6 +26,6 @@ Lab 8: [Joins](labs/08-join)
 
 Lab 9: [Query tips](labs/09-search)
 
-Lab 10: [More Query tips](labs/10-more-search
+Lab 10: [More Query tips](labs/10-more-search)
 
 
