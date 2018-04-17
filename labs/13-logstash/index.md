@@ -9,8 +9,8 @@ sudo apt-get install -y logstash
 
 After it's installed we have to configure it.
 
-Now open `/etc/logstash/conf.d/logstash.conf` in vi 
-And edit to look like following
+Now create  `/etc/logstash/conf.d/logstash.conf` in vi 
+And insert the following
 **Remember to change `<user>` to the correct value**
 ```json
 input {
