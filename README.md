@@ -38,4 +38,6 @@ Lab 12: [Interacting with client libraries](labs/12-python)
 
 Lab 13: [Logstash and MySQL](labs/13-logstash)
 
+Lab 14: [Aggregates and Histograms](labs/14-aggs)
+
 
