@@ -34,4 +34,6 @@ Lab 10: [More Query tips](labs/10-more-search)
 ## Labs 
 Lab 11: [Prefix, Wildcard & Autocompletion](labs/11-prefix-wildcard)
 
+Lab 12: [Interacting with client libraries](labs/12-python)
+
 
