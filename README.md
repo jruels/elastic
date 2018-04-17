@@ -2,9 +2,10 @@
 
 This site contains the content and labs for the Elasticsearch course. 
 
-## Day 1 
 
-### [Course Content](http://bit.ly/es6-slides)
+## [Course Content](http://bit.ly/es6-slides)
+
+## Day 1 
 
 ### Labs
 
@@ -31,7 +32,7 @@ Lab 10: [More Query tips](labs/10-more-search)
 
 ## Day 2
 
-## Labs 
+### Labs 
 Lab 11: [Prefix, Wildcard & Autocompletion](labs/11-prefix-wildcard)
 
 Lab 12: [Interacting with client libraries](labs/12-python)
