@@ -1,4 +1,4 @@
-# Elastic Lab09
+# Elastic Stack Lab09
 In this lab you are going to play around with the “URI Search” format against your Elasticsearch API, then use the correct `JSON` approach and finally use phrase matching and slop wildcards.
 
 Remember this is something that is usual for one-off quick checks, not for production. 
@@ -124,8 +124,18 @@ curl -XGET 127.0.0.1:9200/movies/movie/_search?pretty -d'
 The results now show us any movies with `Star` and `Beyond` in that order, but because of `slop` we can have 1 word in between, or on the left or right and it will also return results for reverse order such as `Beyond Star`
 
 Now let’s look at a proximity query.  Use the same as the previous query but specify a higher slop value, in this case let’s set it to 100 and see what the results are. 
+```bash
+curl -XGET 127.0.0.1:9200/movies/movie/_search?pretty -d'
+{
+    "query":{
+        "match_phrase": {
+            "title": {"query": "star beyond", "slop": 100}
+        }
+    }
+}'
+```
 
-That wasn’t very exciting, out dataset is too small to really see any difference but if we did have a larger dataset it would return all results that have `Star` and `beyond` with up to 100 words in between and sort them by relevance. 
+That wasn’t very exciting, our dataset is too small to really see any difference but if we did have a larger dataset it would return all results that have `Star` and `beyond` with up to 100 words in between and sort them by relevance. 
 
 
 # Lab Complete 
