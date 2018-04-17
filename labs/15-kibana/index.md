@@ -61,6 +61,8 @@ It is very easy to get dynamically generated graphs and charts using Kibana.
 
 Now click on Visualize on the left side bar.
 
+Click on `Create a visualization`
+
 Click Tag Cloud at the bottom of the screen and in the new window click `shakespeare`
 
 ![](index/3EEE69E5-4A45-409E-A50A-D4EF35DAB773.png)
