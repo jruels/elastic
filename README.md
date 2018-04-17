@@ -29,3 +29,9 @@ Lab 9: [Query tips](labs/09-search)
 Lab 10: [More Query tips](labs/10-more-search)
 
 
+## Day 2
+
+## Labs 
+Lab 11: [Prefix, Wildcard & Autocompletion](labs/11-prefix-wildcard)
+
+
