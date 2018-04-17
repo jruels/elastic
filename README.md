@@ -40,4 +40,8 @@ Lab 13: [Logstash and MySQL](labs/13-logstash)
 
 Lab 14: [Aggregates and Histograms](labs/14-aggs)
 
+Lab 15: [Getting started with Kibana](labs/15-kibana)
+
+Lab 16: [Filebeat setup & integration](labs/16-filebeat)
+
 
