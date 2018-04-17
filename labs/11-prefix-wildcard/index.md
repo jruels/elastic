@@ -1,4 +1,5 @@
 # Elastic Stack Lab11
+
 This lab is going to focus on prefix and wildcard queries, which both make retrieving the correct results much easier and you'll learn about predictive searching.  
 
 We need to create a new mapping and to do that we have to delete the index. 
@@ -110,7 +111,7 @@ Looking through the results should show you an example of how the analyzer will 
 
 Now we need to apply this new analyzer to our `title` field and create a new mapping. 
 ```bash
-curl -XPUT '127.0.0.1:9200/movies?_mapping/movie/pretty' -d '
+curl -XPUT '127.0.0.1:9200/movies/_mapping/movie?pretty' -d '
 { 
     "movie": {
         "properties": {
