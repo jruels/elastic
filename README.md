@@ -45,6 +45,8 @@ Lab 15: [Getting started with Kibana](labs/15-kibana)
 
 Lab 16: [Filebeat setup & integration](labs/16-filebeat)
 
+Lab 17: [Install X-Pack](labs/17-xpack)
+
 # Class Feedback
 
 Please let me know what you enjoyed about the class and if there's anything that can be improved. 
