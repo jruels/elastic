@@ -133,7 +133,7 @@ Start by running a simple 	`match` query for the `title` field searching for `st
 
 ```bash
 curl -XGET 127.0.0.1:9200/movies/movie/_search?pretty -d '
-}
+{
     "query": {
         "match": {
             "title": "sta"
@@ -149,7 +149,7 @@ Well, if you remember we discussed how on the index side we want to use the n-gr
 Let's update the above query to use a different analyzer. 
 ```bash
 curl -XGET 127.0.0.1:9200/movies/movie/_search?pretty -d '
-}
+{
     "query": {
         "match": {
             "title": {"query": "sta", "analyzer": "standard"}
