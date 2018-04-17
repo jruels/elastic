@@ -36,6 +36,6 @@ Lab 11: [Prefix, Wildcard & Autocompletion](labs/11-prefix-wildcard)
 
 Lab 12: [Interacting with client libraries](labs/12-python)
 
-Lab 13: [Logstash and MySQL](labs/13-mysql)
+Lab 13: [Logstash and MySQL](labs/13-logstash)
 
 
