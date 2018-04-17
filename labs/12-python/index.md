@@ -68,32 +68,49 @@ Now let's go ahead and use a client side library to interact with the API instea
 ## Python - ratings 
 To run our `Python` script we must first install `pip` and some modules from it. 
 
-```
+```bash
 sudo apt install -y python3-pip
 ```
 
 Now that `pip` is installed let's use it to install the `Python` Elasticsearch module.
-```
+```bash
 sudo pip3 install elasticsearch 
 ```
 
 After that's complete we need to download the script. 
-```
+```bash
 wget http://bit.ly/es-py-ratings -O IndexRatings.py
 ```
 
 Now that we've downloaded that it's time to run it! 
 
-```
+```bash
 python3 IndexRatings.py
 ```
 
 Ok, now let's use our trusty `curl` command to confirm everything was created successfully. 
 
-```
+```bash
 curl -XGET 127.0.0.1:9200/ratings/_search?pretty
 ```
 
 And if everything went smoothly we should see a list of movies with their ratings.
+
+We can import many other files as well with simple edits to our `Python` script. 
+
+## Python - tags 
+Use the tags script you created in the previous exercise to import all of the data from the `tags.csv` file.
+
+```bash
+python3 IndexTags.py
+```
+
+After that completes confirm the data was imported as expected. 
+
+```bash
+curl -XGET 127.0.0.1:9200/tags/_search?pretty
+```
+
+Confirm the tags were imported successfully. 
 
 # Lab Complete 
