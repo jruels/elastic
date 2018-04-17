@@ -122,7 +122,7 @@ Now load the data into the database
 ```
 LOAD DATA LOCAL INFILE 'ml-100k/u.item' INTO TABLE movielens.movies FIELDS TERMINATED BY '|'
 -> (movieID, title, @var3)
--> set releaseDate = STR_TO_DATE(@var3, '%d-%M-%Y);
+-> set releaseDate = STR_TO_DATE(@var3, '%d-%M-%Y');
 ```
 
 Now if the above commands were all successful you should be able to run the following to confirm all the records were imported. 
