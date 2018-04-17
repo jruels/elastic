@@ -191,6 +191,14 @@ output {
 }
 ```
 
+Now we need to restart Logstash and pass it the new mysql config file. 
+
+```
+cd /usr/share/logstash/
+sudo bin/logstash -f /etc/logstash/conf.d/mysql.conf
+```
+
+
 Now let's confirm the data was imported correctly. 
 
 ```
