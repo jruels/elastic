@@ -27,11 +27,11 @@ Now let's try a query that's a bit more complicated.  We are going to pull back 
 curl -XGET '127.0.0.1:9200/ratings/rating/_search?size=0&pretty' -d '
 {
     "query": {
-        "match: { "rating": 5.0 }
-    {,
+        "match": { "rating": 5.0 }
+    },
     "aggs": {
         "ratings": {
-            "terms": { field": "rating" }
+            "terms": { "field": "rating" }
         }
     }
 }'
@@ -61,7 +61,7 @@ curl -XGET '127.0.0.1:9200/ratings/rating/_search?size=0&pretty' -d '
 Histograms are a great way to retrieve data that can easily be used for visual graphs. 
 
 Let's start by creating a query which will show us ratings grouped by whole number. 
-```
+```bash
 curl -XGET '127.0.0.1:9200/ratings/rating/_search?size=0&pretty' -d '
 {
     "aggs": {
@@ -78,7 +78,7 @@ curl -XGET '127.0.0.1:9200/ratings/rating/_search?size=0&pretty' -d '
 The output of this query should show you ratings grouped by whole number. 
 
 Now let's bucket up all the movies by release year. 
-```
+```bash
 curl -XGET '127.0.0.1:9200/movies/movie/_search?size=0&pretty' -d '
 {
     "aggs": {
