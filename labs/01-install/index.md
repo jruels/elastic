@@ -98,7 +98,7 @@ Now that Ubuntu is installed let’s login and install Elasticsearch.
 
 ### Mac
 SSH to Ubuntu VM 
-```
+```bash
 ssh ubuntu@127.0.0.1 -p2222 
 ```
 
@@ -116,32 +116,32 @@ Open Putty and configure a new session.
 
 
 Elasticsearch is based on Java, so we need to install a Java environment.
-```
+```bash
 sudo apt-get install default-jdk
 ```
 
 Now we can install Elasticsearch itself.
 
 First let’s add the Elasticsearch GPG key to our VM
-```
+```bash
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 ```
 
 Now we need to add the Elasticsearch repo to our VM. 
-```
+```bash
 sudo apt-get install apt-transport-https
 echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
 ```
 
 Finally let’s install Elasticsearch
-```
+```bash
 sudo apt-get update && sudo apt-get install elasticsearch
 ```
 
 After this completes we need to allow external access to our Elasticsearch instance. 
 
 Edit `elasticsearch.yml` 
-```
+```bash
 sudo vi /etc/elasticsearch/elasticsearch.yml
 ```
 
@@ -149,7 +149,7 @@ Change `network.host` to `0.0.0.0`
  (in vi, use the arrow keys to move where you want to edit, then hit “i” to enter “insert mode” and make your edits. When done, hit ESC to exit “insert mode”, then type :wq to write your changes and quit vi.)
 
 Now we have to restart the daemon so it re-reads the updated configuration file. 
-```
+```bash
 sudo /bin/systemctl daemon-reload
 sudo /bin/systemctl enable elasticsearch.service
 sudo /bin/systemctl start elasticsearch.service
@@ -158,11 +158,11 @@ sudo /bin/systemctl start elasticsearch.service
 If everything restarted without any errors Elasticsearch has been successfully installed! 
 
 Let’s confirm it is working as expected by connecting to the API.
-```
+```bash
 curl 127.0.0.1:9200
 ```
 
-```
+```bash
 $ curl 127.0.0.1:9200
 {
   "name" : "itdyml7",
@@ -188,23 +188,23 @@ You can also test it by loading http://127.0.0.1:9200 in a browser, and if you s
 Now that we have Elasticsearch installed it needs some data to aggregate and index.  Let’s go ahead and load in the complete works of William Shakespeare 
 
 Download and create the mapping 
-```
-wget http://media.sundog-soft.com/es6/shakes-mapping.json
+```bash
+wget http://bit.ly/es-shakes-mapping -O shakes-mapping.json
 curl -H 'Content-Type: application/json' -XPUT 127.0.0.1:9200/shakespeare --data-binary @shakes-mapping.json
 ```
 
 Download the data 
-```
-wget http://media.sundog-soft.com/es6/shakespeare_6.0.json
+```bash
+wget http://bit.ly/es-shakes-data -O shakespeare_6.0.json
 ```
 
 Now we are going to load this data into Elasticsearch through it’s API
-```
+```bash
 curl -H 'Content-Type: application/json' -X POST 'localhost:9200/shakespeare/doc/_bulk?pretty' --data-binary  @shakespeare_6.0.json
 ```
 
 And finally let’s go ahead and search the data we just inserted. 
-```
+```bash
 curl -H 'Content-Type: application/json' -XGET '127.0.0.1:9200/shakespeare/_search?pretty' -d '
 {
 "query" : {
@@ -217,7 +217,7 @@ curl -H 'Content-Type: application/json' -XGET '127.0.0.1:9200/shakespeare/_sear
 ```
 
 We are searching all of the data we inserted for “to be or not to be” and our result is…   Wow, pulled it out very quickly and we now know that it came from Hamlet.
-```
+```json
 {
   "took" : 153,
   "timed_out" : false,
