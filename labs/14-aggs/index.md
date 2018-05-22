@@ -92,6 +92,6 @@ curl -XGET '127.0.0.1:9200/movies/movie/_search?size=0&pretty' -d '
 }'
 ```
 
-This query will return results of how many movies where released each decade. 
+This query will return results of how many movies were released each decade. 
 
 # Lab Complete
