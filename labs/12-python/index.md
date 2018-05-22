@@ -99,7 +99,7 @@ And if everything went smoothly we should see a list of movies with their rating
 We can import many other files as well with simple edits to our `Python` script. 
 
 ## Python - tags 
-Copy the `IndexRatings.py script to `IndexTags.py` and modify it to import all of the data from the `tags.csv` file.
+Copy the `IndexRatings.py` script to `IndexTags.py` and modify it to import all of the data from the `tags.csv` file.
 
 ```bash
 python3 IndexTags.py
