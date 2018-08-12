@@ -1,4 +1,4 @@
-# Elastic Stack Lab15
+# Elastic Stack Lab16
 
 In this lab we will install and configure Kibana to use as a dashboard for Elasticsearch
 
@@ -26,7 +26,7 @@ Now confirm Kibana was installed successfully by visiting
 http://127.0.0.1:5601 in your browser and you should see something like this. 
 
 
-![](index/39FF03FE-F867-4B19-BF78-0C2844DB0018.png)
+![](index/39FF03FE-F867-4B19-BF78-0C2844DB0018%202.png)
 
 ## Interact with Kibana 
 Now that we have Kibana installed let's have some fun with it! 
@@ -34,7 +34,7 @@ Now that we have Kibana installed let's have some fun with it!
 First let's start by clicking the button in the top right that says "Set up index patterns". This will take you to a new screen where you can select the index you would like to see data for. 
 
 
-![](index/1F4FC10F-7265-4030-9C57-C5AFF6A37217.png)
+![](index/1F4FC10F-7265-4030-9C57-C5AFF6A37217%202.png)
 
 On this screen under `Index pattern` type in "shakespeare" and then click `Next step`, 
 
@@ -42,7 +42,7 @@ On the next screen click `Create index pattern`
 
 Once that's complete you should see a screen like this
 
-![](index/5528C188-7C40-4A3A-A796-A7625C314B9F.png)
+![](index/5528C188-7C40-4A3A-A796-A7625C314B9F%202.png)
 
 
 Now let's go explore the index we just added. 
@@ -54,7 +54,7 @@ You can see he was in a lot of plays.  Now  we can click on `play name` in the `
 
 For fun go ahead and click on the Visualize button 
 This will take you to a screen that looks similar to this 
-![](index/98873363-4E9A-41C2-861B-C0E72F15FB1A.png)
+![](index/98873363-4E9A-41C2-861B-C0E72F15FB1A%202.png)
 
 
 It is very easy to get dynamically generated graphs and charts using Kibana. 
@@ -65,12 +65,12 @@ Click on `Create a visualization`
 
 Click Tag Cloud at the bottom of the screen and in the new window click `shakespeare`
 
-![](index/3EEE69E5-4A45-409E-A50A-D4EF35DAB773.png)
+![](index/3EEE69E5-4A45-409E-A50A-D4EF35DAB773%202.png)
 
 
 One you do that click on `Tags` on the left under `Buckets`
 
-![](index/E29AF805-A7FC-425C-9771-2154931756BB.png)
+![](index/E29AF805-A7FC-425C-9771-2154931756BB%202.png)
 
 
 On this page fill in the following 
@@ -82,7 +82,7 @@ After filling that in click the play button at the top of screen.
 
 You should see a really interesting screen with the most popular text in Shakespeare's plays. 
 
-![](index/52E2D94C-F9CE-4A42-9A91-3C77CEA57B4C.png)
+![](index/52E2D94C-F9CE-4A42-9A91-3C77CEA57B4C%202.png)
 
 Take some time to click around and explore Kibana. 
 

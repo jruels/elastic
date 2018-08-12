@@ -1,4 +1,4 @@
-# Elastic Stack Lab17
+# Elastic Stack Lab15
 
 In this lab we are going to install the X-Pack plugin which will enable monitoring and alerting in Elasticsearch. 
 
@@ -47,7 +47,7 @@ You will see that it says "No monitoring data is available'...  don't worry that
 
 In the top right corner click on the timeframe and change it to "Last 5 years", now you should have some monitoring recommendations.
 
-Now click around and see what is data is being monitored. 
+Now click around and see what data is being monitored. 
 
 # Lab Complete
 
