@@ -41,11 +41,12 @@ Lab 13: [Logstash and MySQL](labs/13-logstash)
 
 Lab 14: [Aggregates and Histograms](labs/14-aggs)
 
-Lab 15: [Getting started with Kibana](labs/15-kibana)
+Lab 15: [Install X-Pack](labs/15-xpack)
 
-Lab 16: [Filebeat setup & integration](labs/16-filebeat)
+Lab 16: [Getting started with Kibana](labs/16-kibana)
 
-Lab 17: [Install X-Pack](labs/17-xpack)
+Lab 17: [Filebeat setup & integration](labs/17-filebeat)
+
 
 # Class Feedback
 
