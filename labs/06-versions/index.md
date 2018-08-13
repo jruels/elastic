@@ -9,7 +9,7 @@ Elasticsearch allows us to specify a specific version when we go to update a doc
 
 ## Update specific version of document
 To update a specific version we run a command like the following, but remember to change `<movieid`, `version`, `genres`, `title`, and `year` to match the movie you chose! 
-```
+```bash
 curl -XPUT 127.0.0.1:9200/movies/movie/<movieid>?version=<movie_version> -d '
 {
   "genres" : ["IMAX", "Sci-Fi"],
@@ -30,8 +30,8 @@ Run the exact same command as above and look at the output.
 Now we are going to send an updating using `POST` and this time we’re going to add the option to retry if we are updating an older version. 
 
 I will be using the following because the movie I chose was `Interstellar` but you should replace this with the info for the movie you chose in the previous step. 
-```
-curl -XPOST 127.0.0.1:9200/movies/movies/109487/_update?retry_on_conflict=5 -d '
+```bash
+curl -XPOST 127.0.0.1:9200/movies/movie/109487/_update?retry_on_conflict=5 -d '
 {
   "doc": {
     "title" : "Interstellar"
