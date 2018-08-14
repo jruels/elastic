@@ -1,4 +1,4 @@
-# Elastic Stack Lab17
+# Elastic Stack Lab16
 
 In this lab we are going to install Filebeat and a couple plugins to play around with. 
 
@@ -54,7 +54,7 @@ Click on the "Management" tab to create a new index pattern for the `filebeat` l
 
 Under "Index pattern" type in 
 `filebeat-*`
-![](index/02DA6A90-326D-46B5-AB77-D7C993AB8B9C%202.png)
+![](index/02DA6A90-326D-46B5-AB77-D7C993AB8B9C%203.png)
 
 Click `Next step` and then in the time filter dropdown choose `@timestamp` and click `Create index pattern`
 
@@ -65,14 +65,14 @@ Let's play around with this data now.
 
 In Kibana click on `Discover` on the left hand side, then. Where it says `shakespeare*` click the drop down arrow and choose `filebeat-*`
 
-![](index/A0509C58-30A5-4BB4-B7F3-78962E5F3E38%202.png)
+![](index/A0509C58-30A5-4BB4-B7F3-78962E5F3E38%203.png)
 
 You're going to get "No results found".  Don't worry there is data it's just set to only show the last 15 minutes by default so we need to adjust the time range.
 
 In the top right hand corner of the window click `Last 15 minutes` and change it to `Absolute` and then select the first week of May.
 
 
-![](index/95356BFA-A130-4A1F-BC2A-DEADF8E2AFD8%202.png)
+![](index/95356BFA-A130-4A1F-BC2A-DEADF8E2AFD8%203.png)
 
 After this loads, you'll see a lot of log entries which can be filtered to provide valuable information. 
 
@@ -84,7 +84,7 @@ On the left click on `Dashboard` and choose the top result `[Filebeat Apache2] A
 
 
 You should see something like this 
-![](index/D9F9DE45-16DE-41E6-A501-E66DE926D044%202.png)
+![](index/D9F9DE45-16DE-41E6-A501-E66DE926D044%203.png)
 
 Now we can see how easy it is to stream logs to Elasticsearch and use Kibana to create graphs and charts. 
 
