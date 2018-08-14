@@ -1,4 +1,4 @@
-# Elastic Lab10
+# Elastic Stack Lab10
 
 In this lab we’re going to play around with pagination, sorting and more advanced filtering.  We’re also going to learn how to use `fuzziness` to match against mistyped searches. 
 
@@ -151,6 +151,5 @@ Alright so now that we’ve used a `fuzzy` query we are able to handle typos and
 Alright, let’s play around with fuzzy a little bit. Try and figure out the following scenarios on your own and if you need assistance speak with the instructor. 
 
 * Perform a fuzzy query against any movie in the database with 2 different additional characters added.  Make sure that you adjust so that matches are returned. 
-* update your `fuzzy` query so that it will match on searches for “Drk Nite” 
 
 # Lab Complete 
