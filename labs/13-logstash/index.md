@@ -113,7 +113,7 @@ Now look at the format of `ml-100k/u.item` and you'll see it's a pipe delimited 
 
 Log into MySQL 
 ```
-mysql -uroot -ppassword
+sudo mysql -uroot -ppassword
 ```
 
 Create a new database 
