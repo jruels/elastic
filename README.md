@@ -41,9 +41,9 @@ Lab 13: [Logstash and MySQL](labs/13-logstash)
 
 Lab 14: [Aggregates and Histograms](labs/14-aggs)
 
-Lab 15: [Install X-Pack](labs/15-xpack)
+Lab 15: [Getting started with Kibana](labs/15-kibana)
 
-Lab 16: [Getting started with Kibana](labs/16-kibana)
+Lab 16: [Install X-Pack](labs/16-xpack)
 
 Lab 17: [Filebeat setup & integration](labs/17-filebeat)
 
@@ -52,5 +52,5 @@ Lab 17: [Filebeat setup & integration](labs/17-filebeat)
 
 Please let me know what you enjoyed about the class and if there's anything that can be improved. 
 
-[Elasticsearch Feedback](http://www.metricsthatmatter.com/student/evaluation.asp?k=16324&i=VC00432134)
+[Elasticsearch Feedback](http://www.metricsthatmatter.com/student/evaluation.asp?k=16324&i=VC00433142)
 
