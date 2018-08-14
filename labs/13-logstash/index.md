@@ -167,7 +167,20 @@ You should get back something similar to
 15 rows in set (0.00 sec)
 ```
 
+Now we need to create a new `jdbc` user to connect to MySQL
 
+Run the following in MySQL 
+```
+CREATE USER 'jdbc'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'jdbc'@'%';
+FLUSH PRIVILEGES;
+```
+
+Confirm you can log into mysql as the `jdbc` user
+
+```
+mysql -ujdbc -ppassword
+```
 
 Logstash is a Java application and to connect to MySQL is requires the `jdbc` driver.  Installing this is fairly simple. 
 
@@ -186,7 +199,7 @@ Create a new configuration file for Logstash `/etc/logstash/conf.d/mysql.conf` w
 input {
     jdbc {
         jdbc_connection_string => "jdbc:mysql://localhost:3306/movielens"
-        jdbc_user => "root"
+        jdbc_user => "jdbc"
         jdbc_password => "password"
         jdbc_driver_library => "/home/jason/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar"
         jdbc_driver_class => "com.mysql.jdbc.Driver"
