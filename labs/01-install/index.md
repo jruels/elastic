@@ -41,8 +41,8 @@ Rerun the installation and it should succeed.
   
 
 ## Install Ubuntu 
-Now we are going to install a popular Linux distribution Ubuntu 16.04. 
-Download Ubuntu server 16.04 from https://www.ubuntu.com/download/server
+Now we are going to install a popular Linux distribution Ubuntu Server. 
+Download [Ubuntu server](http://cdimage.ubuntu.com/releases/18.04.1/release/ubuntu-18.04.1-server-amd64.iso) 
 
 In VirtualBox click “New” and in the pop-up give your VM a name, for Type choose Linux, and for Version select Ubuntu (64-bit)
 
