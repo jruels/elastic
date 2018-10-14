@@ -118,7 +118,7 @@ Open Putty and configure a new session.
 
 Elasticsearch is based on Java, so we need to install a Java environment.
 ```bash
-sudo apt-get install default-jdk
+sudo apt-get update && sudo apt-get install default-jdk
 ```
 
 Now we can install Elasticsearch itself.
