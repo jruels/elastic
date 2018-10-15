@@ -158,7 +158,7 @@ Edit `elasticsearch.yml`
 sudo vi /etc/elasticsearch/elasticsearch.yml
 ```
 
-Change `network.host` to <IP address from step above>
+Change `network.host` to <IP address from step above> and `127.0.0.1`
 
 ![](index/097A9F54-3005-4FE0-A5FF-7210659940FA.png)
 
