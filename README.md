@@ -50,4 +50,5 @@ Lab 16: [Filebeat setup & integration](labs/16-filebeat)
 
 Please let me know what you enjoyed about the class and if there's anything that can be improved. 
 
+[Provide Feedback](http://www.metricsthatmatter.com/student/evaluation.asp?k=16324&i=ILT00428510)
 
