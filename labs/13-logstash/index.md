@@ -24,32 +24,33 @@ After it's installed we have to configure it.
 
 Now create  `/etc/logstash/conf.d/logstash.conf` in vi 
 And insert the following
-**Remember to change `<user>` to the correct value**
-```json
+Remember to change `<user>` to the correct value
+
+```
 input {
-    file {
-        path => "/home/<user>/access_log"
-        start_position => "beginning"
-        ignore_older => 0
-    }
+  file {
+    path => "/home/<user>/access_log"
+    start_position => "beginning"
+  }
 }
 
 filter {
+  if [path] =~ "access" {
+    mutate { replace => { "type" => "apache_access" } }
     grok {
-        match => { "message" => "%{COMBINEDAPACHELOG}" }
+      match => { "message" => "%{COMBINEDAPACHELOG}" }
     }
-    date {
-        match => [ "timestamp", "dd/MMM/yyyy:HH:mm:ss Z" ]
-    }
+  }
+  date {
+    match => [ "timestamp" , "dd/MMM/yyyy:HH:mm:ss Z" ]
+  }
 }
 
 output {
-    elasticsearch {
-        hosts => [ "localhost:9200" ]
-    }
-    stdout {
-        codec => rubydebug
-    }
+  elasticsearch {
+    hosts => ["localhost:9200"]
+  }
+  stdout { codec => rubydebug }
 }
 ```
 
@@ -194,7 +195,7 @@ unzip mysql-connector-java-5.1.46.zip
 Now we need to configure Logstash to connect to MySQL. 
 
 Create a new configuration file for Logstash `/etc/logstash/conf.d/mysql.conf` with the following data.
-**Remember to change `<user>` to the correct value**
+Remember to change `<user>` to the correct value
 ```json
 input {
     jdbc {
