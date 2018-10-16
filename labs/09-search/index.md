@@ -21,7 +21,7 @@ That query should return any movies that have been released since 2010 and conta
 
 Did that return what we were requesting? 
 
-Nope, it returned all movies in the `movie` index, but why did it do that?   Well the query we tried to send was not encoded so curl ignored everything after the first `+` which means it skipped our search terms of year and title. This is why “URI Search” can be difficult and return unexpected results. 
+Nope, the query we tried to send was not encoded so curl couldn't interpret it correctly. This is why “URI Search” can be difficult and return unexpected results. 
 
 Now let’s go ahead and run that again but we’ll URL encode it. 
 ```bash
