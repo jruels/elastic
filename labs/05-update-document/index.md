@@ -77,13 +77,15 @@ Ok well that title isn’t as clever as I originally thought.  Let’s go ahead 
 Using `curl`  with the `POST` verb create a new document with the same `_id` of `109487` and the following data 
 ```json
 {
-    "genre" : ["IMAP","Sci-FI"], "title" : "Interstellar", "year" :2014
+    "genre" : ["IMAP","Sci-FI"], 
+    "title" : "Interstellar", 
+    "year" :2014
 }
 ```
 
 What happened?  Does the document still have version `2`
 
-In the output you’ll notice that the `_version` was incremented to `3` now and even though we told Elasticsearch to create a new document with id `109487` it is smart enough to realize it already exists and to just update it.  Check the `result` field and see what it says. 
+In the output you’ll notice that the `_version` incremented to `3`  even though we told Elasticsearch to create a new document with id `109487` it is smart enough to realize it already exists and to just update it.  Check the `result` field and see what it says. 
 
 Now play around and update a few more documents. 
 
