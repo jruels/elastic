@@ -3,7 +3,7 @@
 This site contains the content and labs for the Elasticsearch course. 
 
 
-## [Course Content](https://www.dropbox.com/sh/t71c6u8oggor2ww/AAANwMsato9otVH6EtxJDraZa?dl=0)
+## [Course Content](https://www.dropbox.com/sh/pnx2klr4reiu01n/AADaY-GGaqOW_EaKifoMxB3ia?dl=0)
 
 ## Day 1 
 
