@@ -9,6 +9,8 @@ This site contains the content and labs for the Elasticsearch course.
 
 ### Labs
 
+[Lab Setup](labs/001_setup/)
+
 Lab 1: [Installation](labs/01-install/)   
 
 Lab 2: [Download dataset](labs/02-movielens/) 
