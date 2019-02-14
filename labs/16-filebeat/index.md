@@ -7,10 +7,16 @@ Let's start by installing Filebeat
 sudo apt-get update && sudo apt-get -y install filebeat
 ```
 
-After the installation we need to install a couple plugins into Elasticsearch which will enable geo-ip translation and work with user-agent strings. 
+After the installation we need to install a couple plugins into Elasticsearch.
+
+First enable geo-ip translation. 
 ```
 cd /usr/share/elasticsearch/
 sudo bin/elasticsearch-plugin install ingest-geoip
+```
+
+Enable user-agent analytics
+```
 sudo bin/elasticsearch-plugin install ingest-user-agent
 ```
 
@@ -28,9 +34,15 @@ sudo mv /etc/filebeat/modules.d/apache2.yml.disabled /etc/filebeat/modules.d/apa
 sudo vi /etc/filebeat/modules.d/apache2.yml  
 ```
 
-In the file edit `var.paths`  for `access` and `error` logs to point to your home directory
+In the file edit `var.paths`  for `access` logs to point to your home directory
 `var.paths: ["/home/<user>/logs/access*"]`
-`var.paths: ["/home/<user>/logs/error*"]`
+
+Disable `error` logs by changing to look like below
+```
+# Error logs
+  error:
+    enabled: false
+```
 
 Now in our home directory we need to create `logs` directory and copy the access logs over
 ```
@@ -48,7 +60,7 @@ sudo /bin/systemctl start filebeat.service
 ## Kibana and Filebeats
 Now that we have Filebeats shipping our logs to Elasticsearch we should be able to see those changes in Kibana. 
 
-Start by browsing to the [Kibana dashboard](http://127.0.0.1:5601) 
+Start by browsing to the Kibana dashboard
 
 Click on the "Management" tab to create a new index pattern for the `filebeat` logs. 
 
