@@ -72,7 +72,7 @@ sudo /bin/systemctl stop elasticsearch
 Now we'll start up the old and new version 
 ```
 sudo /bin/systemctl start elasticsearch 
-sudo /bin/systectl start elasticsearch-node2
+sudo /bin/systemctl start elasticsearch-node2
 ```
 
 After a few minutes let's confirm the new node was added to the cluster 
