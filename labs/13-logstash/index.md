@@ -92,6 +92,13 @@ sudo apt-get install -y mysql-server
 * Set password to 'password' without the quotes. 
 
 Now we need to import some data into MySQL. 
+
+Start by changing directories back to Ubuntu home.
+```
+cd ~
+```
+
+Download the movie data
 ```
 wget http://files.grouplens.org/datasets/movielens/ml-100k.zip
 unzip ml-100k.zip 
