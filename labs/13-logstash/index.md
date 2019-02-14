@@ -1,20 +1,7 @@
 # Elastic Stack Lab13
 In this lab we are going to install and configure Logstash. 
 
-Ubuntu 18.04 comes with Java 10 installed by default, but Logstash does not support anything above Java 8 at this time.  The following step will install Java 8. 
-
-```
-sudo apt install openjdk-8-jdk
-```
-
-Now we need to set Java 8 as the default. 
-
-```
-sudo update-alternatives --config java
-```
-Choose openjdk-8 
-
-Once this is done run the following to install Logstash.  
+Run the following to install Logstash.  
 ```
 sudo apt-get update
 sudo apt-get install -y logstash 
