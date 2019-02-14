@@ -43,7 +43,7 @@ Great, now we have one more small change to make.
 We need to copy the init script and update the `CONF` path.
 To copy it run
 ```
-sudo cp /usr/lib/systemd/system/elasticsearch.service /usr/lib/systemd/system/elasticsearch-node2
+sudo cp /usr/lib/systemd/system/elasticsearch.service /usr/lib/systemd/system/elasticsearch-node2.service
 ```
 Now that we've copied it let's update the configuration.
 
