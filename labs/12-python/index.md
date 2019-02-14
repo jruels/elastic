@@ -72,26 +72,6 @@ To run our `Python` script we must first install `pip` and some modules from it.
 sudo apt install -y python3-pip
 ```
 
-If this fails you may need to add the `universe` repository. 
-
-```
-sudo vim /etc/apt/sources.list 
-```
-
-Add the following line 
-```
-deb http://archive.ubuntu.com/ubuntu bionic universe
-```
-Save the file and then update
-```
-sudo apt-get update
-```
-
-Now try to install `pip`
-```
-sudo apt install -y python3-pip 
-```
-
 Now that `pip` is installed let's use it to install the `Python` Elasticsearch module.
 ```bash
 sudo pip3 install elasticsearch 
