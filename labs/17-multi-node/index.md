@@ -80,7 +80,7 @@ curl -XGET 127.0.0.1:9200/_cluster/health?pretty
 ```
 
 We should see the `number_of_nodes` has increased, due to adding another node.
-```
+
 Now if everything worked successfully `status` should go from yellow to green and you should see the shards rebalance. 
 
 Now let's confirm it also shows the same from our new node by checking port `9201`
@@ -89,7 +89,6 @@ curl -XGET 127.0.0.1:9200/_cluster/health?pretty
 ```
 
 We can now query either of them and get the same results. 
-```
 
 Now let's stop our original node and confirm that it fails over to thew new node we've added. 
 ```
