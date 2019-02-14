@@ -83,4 +83,45 @@ We should see the `number_of_nodes` has increased, due to adding another node.
 ```
 Now if everything worked successfully `status` should go from yellow to green and you should see the shards rebalance. 
 
+Now let's confirm it also shows the same from our new node by checking port `9201`
+```
+curl -XGET 127.0.0.1:9200/_cluster/health?pretty
+```
+
+We can now query either of them and get the same results. 
+```
+
+Now let's stop our original node and confirm that it fails over to thew new node we've added. 
+```
+sudo systemctl stop elasticsearch
+```
+
+Wait a couple minutes and check the cluster health
+```
+curl -XGET 127.0.0.1:9201/_cluster/health?pretty
+```
+
+Great! eveything failed over and it appears the end user wouldn't be affected at all. 
+
+To confirm all the data is still available let's go ahead and query the new node for Shakespeare
+```
+curl -XGET 127.0.0.1:9201/shakespeare/_search?pretty
+```
+
+You should now see that the shards were automatically distributed between the old and the new node. 
+
+Now if we start up our original node everything will rebalance and our cluster will go back to a green status 
+
+Start up the service
+```
+sudo systemctl start elasticsearch 
+```
+
+Wait a few minutes and then query the cluster health 
+```
+curl -XGET 127.0.0.1:9200/_cluster/health?pretty
+```
+
+The above commands simulated a node failure and we can see that Elasticsearch handled it without any issues. 
+
 # Lab Complete 
