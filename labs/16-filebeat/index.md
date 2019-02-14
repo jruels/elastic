@@ -7,9 +7,9 @@ Let's start by installing Filebeat
 sudo apt-get update && sudo apt-get -y install filebeat
 ```
 
-After the installation we need to install a couple plugins into Elasticsearch.
+After the installation we need to install a couple plugins into Elasticsearch 
 
-First enable geo-ip translation. 
+First enable geo-ip translation.
 ```
 cd /usr/share/elasticsearch/
 sudo bin/elasticsearch-plugin install ingest-geoip
@@ -26,6 +26,8 @@ sudo /bin/systemctl stop elasticsearch.service
 sudo /bin/systemctl start elasticsearch.service
 ```
 
+It takes a few minutes for Elasticsearch to come back online so if you run the following commands and they report an error wait a bit and try again. 
+
 Now let's go configure Filebeat.
 ```
 cd /usr/share/filebeat/bin
@@ -37,9 +39,9 @@ sudo vi /etc/filebeat/modules.d/apache2.yml
 In the file edit `var.paths`  for `access` logs to point to your home directory
 `var.paths: ["/home/<user>/logs/access*"]`
 
-Disable `error` logs by changing to look like below
+Disable `error` logs by changing to look like below:
 ```
-# Error logs
+# Error logs 
   error:
     enabled: false
 ```
@@ -60,31 +62,24 @@ sudo /bin/systemctl start filebeat.service
 ## Kibana and Filebeats
 Now that we have Filebeats shipping our logs to Elasticsearch we should be able to see those changes in Kibana. 
 
-Start by browsing to the Kibana dashboard
+Start by browsing to the [Kibana dashboard](http://127.0.0.1:5601) 
 
-Click on the "Management" tab to create a new index pattern for the `filebeat` logs. 
+Click on the "Management" tab to confirm a new index pattern for the `filebeat` logs was created. 
 
-Under "Index pattern" type in 
-`filebeat-*`
-![](index/02DA6A90-326D-46B5-AB77-D7C993AB8B9C%203.png)
-
-Click `Next step` and then in the time filter dropdown choose `@timestamp` and click `Create index pattern`
-
-
-Great so now we've got all the data from filebeat directly imported into Elasticsearch. 
+Great so now we've got all the data from Filebeat directly imported into Elasticsearch. 
 
 Let's play around with this data now. 
 
 In Kibana click on `Discover` on the left hand side, then. Where it says `shakespeare*` click the drop down arrow and choose `filebeat-*`
 
-![](index/A0509C58-30A5-4BB4-B7F3-78962E5F3E38%203.png)
+![](index/A0509C58-30A5-4BB4-B7F3-78962E5F3E38%204.png)
 
 You're going to get "No results found".  Don't worry there is data it's just set to only show the last 15 minutes by default so we need to adjust the time range.
 
 In the top right hand corner of the window click `Last 15 minutes` and change it to `Absolute` and then select the first week of May.
 
 
-![](index/95356BFA-A130-4A1F-BC2A-DEADF8E2AFD8%203.png)
+![](index/95356BFA-A130-4A1F-BC2A-DEADF8E2AFD8%204.png)
 
 After this loads, you'll see a lot of log entries which can be filtered to provide valuable information. 
 
@@ -92,11 +87,11 @@ On the `Discover` screen, left hand side click on when hovering over `apache2.ac
 
 Now let's turn some of that info into graphs and charts. 
 
-On the left click on `Dashboard` and choose the top result `[Filebeat Apache2] Access and error logs`
+On the left click on `Dashboard` and choose  `[Filebeat Apache2] Access and error logs`
 
 
 You should see something like this 
-![](index/D9F9DE45-16DE-41E6-A501-E66DE926D044%203.png)
+![](index/D9F9DE45-16DE-41E6-A501-E66DE926D044%204.png)
 
 Now we can see how easy it is to stream logs to Elasticsearch and use Kibana to create graphs and charts. 
 
