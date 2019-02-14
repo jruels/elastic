@@ -26,6 +26,7 @@ In the new `elasticsearch-node2` directory edit the `elasticsearch.yml` file and
 cluster.name: my-cluster
 node.name: node-2
 network.port: 9201
+node.max_local_storage_nodes: 2
 ``` 
 
 Now we've setup the configuration file for the new node in our cluster but there's still a little more. 
