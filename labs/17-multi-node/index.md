@@ -85,7 +85,7 @@ Now if everything worked successfully `status` should go from yellow to green an
 
 Now let's confirm it also shows the same from our new node by checking port `9201`
 ```
-curl -XGET 127.0.0.1:9200/_cluster/health?pretty
+curl -XGET 127.0.0.1:9201/_cluster/health?pretty
 ```
 
 We can now query either of them and get the same results. 
