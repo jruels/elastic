@@ -25,10 +25,11 @@ sudo /bin/systemctl daemon-reload
 sudo /bin/systemctl enable kibana.service
 sudo /bin/systemctl start kibana.service
 ```
+Kibana can take a few minutes to start. 
 
 Now confirm Kibana was installed successfully by visiting 
 
-http://127.0.0.1:5601 in your browser and you should see something like this. 
+http://<VM IP>:5601 in your browser and you should see something like this. 
 
 
 ![](index/39FF03FE-F867-4B19-BF78-0C2844DB0018%206.png)
