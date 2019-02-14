@@ -47,6 +47,8 @@ Lab 15: [Getting started with Kibana](labs/15-kibana)
 
 Lab 16: [Filebeat setup & integration](labs/16-filebeat)
 
+Lab 17: [Multi-node cluster](labs/17-multi-node)
+
 
 # Class Feedback
 
