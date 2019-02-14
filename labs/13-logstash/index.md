@@ -190,7 +190,7 @@ Now we need to configure Logstash to connect to MySQL.
 
 Create a new configuration file for Logstash `/etc/logstash/conf.d/mysql.conf` with the following data.
 Remember to change `<user>` to the correct value
-```json
+```
 input {
     jdbc {
         jdbc_connection_string => "jdbc:mysql://localhost:3306/movielens"
