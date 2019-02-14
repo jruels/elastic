@@ -49,6 +49,8 @@ Lab 16: [Filebeat setup & integration](labs/16-filebeat)
 
 Lab 17: [Multi-node cluster](labs/17-multi-node)
 
+Lab 18: [More search fun!](labs/18-complex-queries)
+
 
 # Class Feedback
 
