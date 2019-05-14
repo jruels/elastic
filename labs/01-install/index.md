@@ -44,7 +44,7 @@ sudo vi /etc/elasticsearch/elasticsearch.yml
 
 Change `http.host` to `0.0.0.0`
 
-![](index/0D7C537F-F1FA-4199-A63E-AA6EC3B74708%203.png)
+![](index/0D7C537F-F1FA-4199-A63E-AA6EC3B74708%204.png)
 
  (in vi, use the arrow keys to move where you want to edit, then hit “i” to enter “insert mode” and make your edits. When done, hit `ESC` to exit “insert mode”, then type `:wq` to write your changes and quit vi.)
 
@@ -85,8 +85,8 @@ $ curl 127.0.0.1:9200
 }
 ```
 
-You can also test it by loading http://<VM IP>:9200 in a browser, and if you see something like the following it’s working correctly. 
-![](index/05CDF398-09D6-4AE2-BA56-7A5BAA985A2D%207.png)
+You can also test it by loading http://VMIP:9200 in a browser, and if you see something like the following it’s working correctly. 
+![](index/05CDF398-09D6-4AE2-BA56-7A5BAA985A2D%208.png)
 
 ## Loading data into Elasticsearch 
 Now that we have Elasticsearch installed it needs some data to aggregate and index.  Let’s go ahead and load in the complete works of William Shakespeare 
