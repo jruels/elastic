@@ -7,27 +7,6 @@ Let's start by installing Filebeat
 sudo apt-get update && sudo apt-get -y install filebeat
 ```
 
-After the installation we need to install a couple plugins into Elasticsearch 
-
-First enable geo-ip translation.
-```
-cd /usr/share/elasticsearch/
-sudo bin/elasticsearch-plugin install ingest-geoip
-```
-
-Enable user-agent analytics
-```
-sudo bin/elasticsearch-plugin install ingest-user-agent
-```
-
-Now we need to restart Elasticsearch 
-```
-sudo /bin/systemctl stop elasticsearch.service
-sudo /bin/systemctl start elasticsearch.service
-```
-
-It takes a few minutes for Elasticsearch to come back online so if you run the following commands and they report an error wait a bit and try again. 
-
 Now let's go configure Filebeat.
 ```
 cd /usr/share/filebeat/bin
@@ -72,14 +51,14 @@ Let's play around with this data now.
 
 In Kibana click on `Discover` on the left hand side, then. Where it says `shakespeare*` click the drop down arrow and choose `filebeat-*`
 
-![](index/A0509C58-30A5-4BB4-B7F3-78962E5F3E38%204.png)
+![](index/A0509C58-30A5-4BB4-B7F3-78962E5F3E38%205.png)
 
 You're going to get "No results found".  Don't worry there is data it's just set to only show the last 15 minutes by default so we need to adjust the time range.
 
 In the top right hand corner of the window click `Last 15 minutes` and change it to `Absolute` and then select the first week of May.
 
 
-![](index/95356BFA-A130-4A1F-BC2A-DEADF8E2AFD8%204.png)
+![](index/95356BFA-A130-4A1F-BC2A-DEADF8E2AFD8%205.png)
 
 After this loads, you'll see a lot of log entries which can be filtered to provide valuable information. 
 
@@ -91,7 +70,7 @@ On the left click on `Dashboard` and choose  `[Filebeat Apache2] Access and erro
 
 
 You should see something like this 
-![](index/D9F9DE45-16DE-41E6-A501-E66DE926D044%204.png)
+![](index/D9F9DE45-16DE-41E6-A501-E66DE926D044%205.png)
 
 Now we can see how easy it is to stream logs to Elasticsearch and use Kibana to create graphs and charts. 
 
