@@ -8,11 +8,11 @@ In this lab you will be learning more about the `_version` field and how it can 
 Elasticsearch allows us to specify a specific version when we go to update a document, this is so we can use optimal concurrency control to ensure the correct version is updated and there’s no conflicts.
 
 ## Update specific version of document
-To update a specific version we run a command like the following, but remember to change `<movieid`, `version`, `genres`, `title`, and `year` to match the movie you chose! 
+To update a specific version we run a command like the following, but remember to change `<movieid`, `version`, `genre`, `title`, and `year` to match the movie you chose! 
 ```bash
 curl -XPUT 127.0.0.1:9200/movies/movie/<movieid>?version=<movie_version> -d '
 {
-  "genres" : ["IMAX", "Sci-Fi"],
+  "genre" : ["IMAX", "Sci-Fi"],
   "title" : "Interspeller",
   "year" : 2014
 }'
