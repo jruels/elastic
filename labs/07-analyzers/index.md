@@ -121,7 +121,7 @@ Using `curl` with the `GET` verb, query the Elasticsearch API `movies` index wit
 Are the results what you expected?
 Why or why not? 
 
-Now let’s try two query it one more time, paying attention to case.
+Now let’s try to query it one more time, paying attention to case.
 ```json
 { 
   "query": {
