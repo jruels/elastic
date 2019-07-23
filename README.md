@@ -10,6 +10,7 @@ This site contains the content and labs for the Elasticsearch course.
 ### Labs
 
 [Lab Setup](labs/001_setup/)
+[Lab VMs](https://docs.google.com/spreadsheets/d/1hqMfSpDqjohHlOX_bwkYhIvntLVW6E8ktLa3uQLHL7k/edit#gid=0)
 
 Lab 1: [Installation](labs/01-install/)   
 
