@@ -1,4 +1,11 @@
 # Elastic Stack Lab04
+Before beginning this lab create the alias for `curl` discussed in the slides. 
+
+Open `~/.bashrc` in vim or your favorite editor and add: 
+```
+alias curl="/usr/bin/curl -H 'Content-type: application/json' "
+```
+
 In this lab you will be importing data from the MovieLens dataset we downloaded earlier.  
 
 ## Import Single Document
