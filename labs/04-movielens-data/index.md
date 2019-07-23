@@ -5,6 +5,10 @@ Open `~/.bashrc` in vim or your favorite editor and add:
 ```
 alias curl="/usr/bin/curl -H 'Content-type: application/json' "
 ```
+Now that source the updated `~/.bashrc` file to apply alias. 
+```
+source ~/.bashrc
+```
 
 In this lab you will be importing data from the MovieLens dataset we downloaded earlier.  
 
