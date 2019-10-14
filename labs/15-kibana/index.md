@@ -14,11 +14,6 @@ sudo vi /etc/kibana/kibana.yml
 
 Uncomment and change the `server.host` to `0.0.0.0` to allow external connections. 
 
-We also need to disable security for X-Pack so we can use the free features and not pay for a subscription. Add the following anywhere in the file.
-```
-xpack.security.enabled: false
-```
-
 Now reload everything 
 ```
 sudo /bin/systemctl daemon-reload
@@ -26,11 +21,10 @@ sudo /bin/systemctl enable kibana.service
 sudo /bin/systemctl start kibana.service
 ```
 
-Now confirm Kibana was installed successfully by visiting 
+Kibana can take a few minutes to start, wait about 3 minutes then visit http://VMIP on port 5601 in your browser.
 
-Kibana can take a few minutes to start.
 
-Visit http://VMIP on port 5601 in your browser and you should see something like this. 
+You should see something like this. 
 
 
 ![](index/39FF03FE-F867-4B19-BF78-0C2844DB0018%208.png)
