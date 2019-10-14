@@ -11,12 +11,11 @@ After it's installed we have to configure it.
 
 Now create  `/etc/logstash/conf.d/logstash.conf` in vi 
 And insert the following
-Remember to change `<user>` to the correct value
 
 ```
 input {
   file {
-    path => "/home/<user>/access_log"
+    path => "/home/ubuntu/access_log"
     start_position => "beginning"
   }
 }
@@ -187,14 +186,13 @@ unzip mysql-connector-java-5.1.46.zip
 Now we need to configure Logstash to connect to MySQL. 
 
 Create a new configuration file for Logstash `/etc/logstash/conf.d/mysql.conf` with the following data.
-Remember to change `<user>` to the correct value
-```json
+```
 input {
     jdbc {
         jdbc_connection_string => "jdbc:mysql://localhost:3306/movielens"
         jdbc_user => "jdbc"
         jdbc_password => "password"
-        jdbc_driver_library => "/home/jason/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar"
+        jdbc_driver_library => "/home/ubuntu/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar"
         jdbc_driver_class => "com.mysql.jdbc.Driver"
         statement => "SELECT * FROM movies"
     }
